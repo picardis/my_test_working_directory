@@ -1,4 +1,4 @@
-This is a repository created by Simona Picardi for WLF 553 Reproducible Data Science.
+This is a repository created by Simona Picardi for WLF 553 Reproducible Data Science. Hello world!
 
 Burrowing Owls Rule!
 
