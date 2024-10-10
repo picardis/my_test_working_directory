@@ -14,14 +14,18 @@ vignette("DBI", package = "DBI") # to open a specific vignette
 
 ?dbConnect
 # arrow is an assignment object, alt dash to insert
-# package :: function to specify which package want to work from 
-#^ (helpful if two different packages have same function name
-#^^[or if don't load package in lib])
+
 #dragons_db <- creating a new object in R called dragons_db
 dragons_db <- dbConnect(RSQLite::SQLite(),"../dragons.db") 
+# :: --> the colon colon means the function SQLite from the package RSQLite
+#^may not always need this if the function name is unique and don't need to specify the package
+#^ (helpful if two different packages have same function name
+#^^[or if don't load package in lib])
+#SQLite is specifying that it is an SQLite db (driver), "path to db"
+
 #if do db_connect on a db that doesn't exist, will create new .db in working directory
 #asignment 6 step 1, will create new name for .db]
-#SQLite is speciftying that it is an SQLite db (driver), "path to db"
+
 #another option if have trouble navigating to correct file path and quick navigate:
 dragons_db <- dbConnect(RSQLite::SQLite(),"C:/Users/stei0696/OneDrive - University of Idaho/Fall 2024/WLF 553 Reproducible Data Science/dragons.db") # step 1, will create new name for .db
 
@@ -53,6 +57,7 @@ dbExecute(dragons_db, "CREATE TABLE fake_table (
           name varchar NOT NULL PRIMARY KEY,
           number real,
           animal varchar
+          );")
 #erything that you can write in SQL code will go in quotes
 ##assignment 6 step 2; use SQL queries that already wrote, each table have diff line]
 
