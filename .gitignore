@@ -2,6 +2,7 @@
 output/
 processed_data/
 raw_data/
+Arctic-fox_Case-Study/
 .Rhistory
 *.docx
 *.jpg
@@ -9,3 +10,4 @@ raw_data/
 *.tiff
 *.tif
 *.xlsx
+*.csv

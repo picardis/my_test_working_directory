@@ -24,7 +24,7 @@ dragons_db <- dbConnect(RSQLite::SQLite(),"../dragons.db")
 #SQLite is specifying that it is an SQLite db (driver), "path to db"
 
 #if do db_connect on a db that doesn't exist, will create new .db in working directory
-#asignment 6 step 1, will create new name for .db]
+#assignment 6 step 1, will create new name for .db]
 
 #another option if have trouble navigating to correct file path and quick navigate:
 dragons_db <- dbConnect(RSQLite::SQLite(),"C:/Users/stei0696/OneDrive - University of Idaho/Fall 2024/WLF 553 Reproducible Data Science/dragons.db") # step 1, will create new name for .db
@@ -46,7 +46,7 @@ capture_sites <- dbGetQuery(conn = dragons_db,
 #List of tables in database ####
 dbListTables(dragons_db)
 
-#want to pull in ad many tables as you want to analze then go from there
+#want to pull in ad many tables as you want to analyze then go from there
 
 dbGetQuery(dragons_db, "SELECT DISTINCT dragon_id from dragons;")
 #not creating anything from R, but in console will show output
@@ -58,7 +58,10 @@ dbExecute(dragons_db, "CREATE TABLE fake_table (
           number real,
           animal varchar
           );")
-#erything that you can write in SQL code will go in quotes
+#everything that you can write in SQL code will go in quotes
 ##assignment 6 step 2; use SQL queries that already wrote, each table have diff line]
 
-?dbWriteTable #fill data into the table [assignment 6 step 3; next class)
+?dbWriteTable #fill data into the table [assignment 6 step 3; next class]
+#Update 10/10/24 don't worry about populating db at this point because our
+#data might not match the db structure at this point, and we'll learn how
+#to clean the data in later classes
